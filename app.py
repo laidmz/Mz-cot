@@ -569,7 +569,8 @@ if show_idx:
         fig2.update_layout(
     **LAYOUT,
     height=260,
-    yaxis=dict(range=[0, 100]))
+    yaxis={**(LAYOUT.get('yaxis') or {}), "range": [0, 100]}
+)
     st.plotly_chart(fig2, use_container_width=True)
 
 # ─── Data Table ────────────────────────────────────────────────
