@@ -566,8 +566,11 @@ if show_idx:
         fig2.add_hline(y=y_val, line_color=color, line_width=0.8, line_dash='dot',
                        annotation_text=label, annotation_position="top left",
                        annotation_font=dict(color=color, size=9, family='Space Mono'))
-    fig2.update_layout(**LAYOUT, height=260,
-                       yaxis=dict(**LAYOUT['yaxis'], range=[0,100]))
+    fig2.update_layout(
+    **LAYOUT,
+    height=260,
+    yaxis=dict(range=[0, 100])
+)
     st.plotly_chart(fig2, use_container_width=True)
 
 # ─── Data Table ────────────────────────────────────────────────
